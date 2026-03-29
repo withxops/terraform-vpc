@@ -21,15 +21,15 @@ variable "env" {
 
 variable "public_subnets" {
   description = "This is the public subnet range"
-  type = string
+  type = list(string)
 }
 
 variable "private_subnets" {
   description = "This is the private subnet range"
-  type = string
+  type = list(string)
 }
 
 variable "az" {
   description = "Availability Zone"
-  type        = string
+  type = string
 }

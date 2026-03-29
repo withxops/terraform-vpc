@@ -8,21 +8,23 @@ resource "aws_vpc" "my-vpc" {
 }
 
 resource "aws_subnet" "public_sub" {
+  count = length(var.public_subnets)
   vpc_id = aws_vpc.my-vpc.id
-  cidr_block = var.public_subnets
+  cidr_block = var.public_subnets[count.index]
   availability_zone = var.az
   map_public_ip_on_launch = true
   tags = {
-    Name = "${var.vpc_name}-${var.env}-public-subnet"
+    Name = "${var.vpc_name}-${var.env}-public-subnet${count.index + 1}"
   }
 }
 
 resource "aws_subnet" "private_sub" {
+  count = length(var.private_subnets)
   vpc_id = aws_vpc.my-vpc.id
-  cidr_block = var.private_subnets
+  cidr_block = var.private_subnets[count.index]
   availability_zone = var.az
   tags = {
-    Name = "${var.vpc_name}-${var.env}-private-subnet"
+    Name = "${var.vpc_name}-${var.env}-private-subnet${count.index + 1}"
   }
 }
 
@@ -47,7 +49,8 @@ resource "aws_route" "public_internet" {
 }
 
 resource "aws_route_table_association" "public_association" {
-  subnet_id = aws_subnet.public_sub.id
+  count = length(var.public_subnets)
+  subnet_id = aws_subnet.public_sub[count.index].id
   route_table_id = aws_default_route_table.public_route.id
 }
 
@@ -59,7 +62,8 @@ resource "aws_route_table" "private_route" {
 }
 
 resource "aws_route_table_association" "private_association" {
-  subnet_id = aws_subnet.private_sub.id
+  count = length(var.private_subnets)
+  subnet_id = aws_subnet.private_sub[count.index].id
   route_table_id = aws_route_table.private_route.id
 }
 
