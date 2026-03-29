@@ -2,7 +2,6 @@
 
 ![Terraform](https://img.shields.io/badge/Terraform-1.0+-blue)
 ![AWS](https://img.shields.io/badge/AWS-VPC-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -17,7 +16,6 @@ This repository provides a reusable and production-ready **Terraform configurati
 * Creates a custom **VPC**
 * Provisions **Public & Private Subnets**
 * Attaches an **Internet Gateway (IGW)**
-* Configures a **NAT Gateway** for private subnet internet access
 * Sets up **Route Tables & Associations**
 * Supports **environment-based configurations (dev/prod)**
 
@@ -31,7 +29,6 @@ This Terraform setup creates:
 * 2 Public Subnets
 * 2 Private Subnets
 * Internet Gateway
-* NAT Gateway (for outbound internet from private subnets)
 * Route Tables (Public & Private)
 
 ---
@@ -114,7 +111,6 @@ After successful deployment, Terraform will output:
 * VPC ID
 * Public Subnet IDs
 * Private Subnet IDs
-* NAT Gateway ID
 
 ---
 
@@ -124,7 +120,6 @@ After successful deployment, Terraform will output:
 * Modular & reusable design
 * Environment-based tagging (`dev`, `prod`)
 * Separation of public and private networks
-* Secure outbound access via NAT
 
 ---
 
@@ -145,10 +140,10 @@ Feel free to fork this repository and raise a pull request.
 ## 👨‍💻 Author
 
 **Mohan Kumar**
+
 Linkedin: [https://linkedin.com/in/themohankumar]
 
 GitHub: [https://github.com/withxops]
-(https://github.com/withxops)
 
 ---
 
