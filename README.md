@@ -40,11 +40,16 @@ This Terraform setup creates:
 
 ```
 terraform-vpc/
+│── modules/
+│    │── main.tf
+│    │── variables.tf
+│    │── outputs.tf
+│
 │── main.tf
 │── variables.tf
-│── outputs.tf
-│── provider.tf
 │── terraform.tfvars
+│── provider.tf
+|── terraform.tf
 │── README.md
 ```
 
