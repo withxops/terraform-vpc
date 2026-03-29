@@ -142,17 +142,10 @@ terraform destroy
 
 Feel free to fork this repository and raise a pull request.
 
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
----
-
 ## 👨‍💻 Author
 
 **Mohan Kumar**
+Linkedin: [https://linkedin.com/in/themohankumar]
 
 GitHub: [https://github.com/withxops]
 (https://github.com/withxops)
