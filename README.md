@@ -147,7 +147,9 @@ This project is licensed under the **MIT License**.
 ## 👨‍💻 Author
 
 **Mohan Kumar**
-GitHub: [https://github.com/withxops](https://github.com/withxops)
+
+GitHub: [https://github.com/withxops]
+(https://github.com/withxops)
 
 ---
 
