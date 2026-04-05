@@ -31,5 +31,5 @@ variable "private_subnets" {
 
 variable "az" {
   description = "Availability Zone"
-  type = string
+  type = list(string)
 }
